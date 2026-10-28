@@ -1,0 +1,242 @@
+{
+  "meta": {
+    "nama_layanan": "Commuter Line Bandung Raya",
+    "berlaku_mulai": "2026-11-01",
+    "berlaku_sampai": "2026-12-31",
+    "format_jam": "HH.MM (24 jam)",
+    "catatan": [
+      "Jam berangkat di Padalarang dan Cicalengka: snapshot jadwal asli Januari 2026 (Gapeka 2025), dipakai sebagai jadwal simulasi Nov-Des 2026.",
+      "KA 398A (Padalarang 21.46) dan KA 357 (Cicalengka 22.25) dari pengumuman KAI Commuter, 1 Februari 2026. Nomor KA lain hanya simulasi.",
+      "Jam di stasiun perantara dihitung dari km, kecepatan, dan lama berhenti. Bukan jadwal resmi, bisa selisih beberapa menit.",
+      "km: hanya Padalarang (0), Kiaracondong (20), Cicalengka (42) sesuai sumber. km stasiun lain estimasi.",
+      "Jadwal sama setiap hari. Data beda hari kerja dan akhir pekan tidak ditemukan.",
+      "Tarif satu_sisi dan lintas_penuh dari tarif resmi Feb 2026. Aturan stasiun_batas adalah ekstrapolasi, bukan tabel tarif resmi.",
+      "Gerbong 7 mengikuti Wikipedia. Kursi per gerbong mengikuti spek proyek."
+    ]
+  },
+  "stasiun": [
+    {"nama": "Padalarang", "km": 0.0, "berhenti_menit": 1},
+    {"nama": "Gadobangkong", "km": 6.0, "berhenti_menit": 1},
+    {"nama": "Cimahi", "km": 10.5, "berhenti_menit": 1},
+    {"nama": "Ciroyom", "km": 15.5, "berhenti_menit": 1},
+    {"nama": "Bandung", "km": 17.0, "berhenti_menit": 3},
+    {"nama": "Cikudapateuh", "km": 18.5, "berhenti_menit": 1},
+    {"nama": "Kiaracondong", "km": 20.0, "berhenti_menit": 3},
+    {"nama": "Gedebage", "km": 26.5, "berhenti_menit": 1},
+    {"nama": "Cimekar", "km": 30.0, "berhenti_menit": 1},
+    {"nama": "Rancaekek", "km": 33.5, "berhenti_menit": 1},
+    {"nama": "Haurpugur", "km": 37.5, "berhenti_menit": 1},
+    {"nama": "Cicalengka", "km": 42.0, "berhenti_menit": 1}
+  ],
+  "tarif": {"satu_sisi": 4000, "lintas_penuh": 5000, "stasiun_batas": "Kiaracondong"},
+  "kursi": {"baris_per_gerbong": 10, "kursi_per_sisi": 2, "sisi": 2, "kursi_per_gerbong": 40},
+  "kereta": {
+    "BR-B01": {
+      "seri": "KA 325", "arah": "barat", "asal": "Cicalengka", "tujuan": "Padalarang", "kecepatan": 55, "gerbong": 7,
+      "perhentian": [["Cicalengka", "04.45", "04.45"], ["Haurpugur", "04.50", "04.51"], ["Rancaekek", "04.55", "04.56"], ["Cimekar", "05.00", "05.01"], ["Gedebage", "05.05", "05.06"], ["Kiaracondong", "05.13", "05.16"], ["Cikudapateuh", "05.18", "05.19"], ["Bandung", "05.20", "05.23"], ["Ciroyom", "05.25", "05.26"], ["Cimahi", "05.31", "05.32"], ["Gadobangkong", "05.37", "05.38"], ["Padalarang", "05.45", "05.45"]]
+    },
+    "BR-B02": {
+      "seri": "KA 327", "arah": "barat", "asal": "Cicalengka", "tujuan": "Padalarang", "kecepatan": 55, "gerbong": 7,
+      "perhentian": [["Cicalengka", "05.55", "05.55"], ["Haurpugur", "06.00", "06.01"], ["Rancaekek", "06.05", "06.06"], ["Cimekar", "06.10", "06.11"], ["Gedebage", "06.15", "06.16"], ["Kiaracondong", "06.23", "06.26"], ["Cikudapateuh", "06.28", "06.29"], ["Bandung", "06.30", "06.33"], ["Ciroyom", "06.35", "06.36"], ["Cimahi", "06.41", "06.42"], ["Gadobangkong", "06.47", "06.48"], ["Padalarang", "06.55", "06.55"]]
+    },
+    "BR-B03": {
+      "seri": "KA 329", "arah": "barat", "asal": "Cicalengka", "tujuan": "Padalarang", "kecepatan": 55, "gerbong": 7,
+      "perhentian": [["Cicalengka", "06.38", "06.38"], ["Haurpugur", "06.43", "06.44"], ["Rancaekek", "06.48", "06.49"], ["Cimekar", "06.53", "06.54"], ["Gedebage", "06.58", "06.59"], ["Kiaracondong", "07.06", "07.09"], ["Cikudapateuh", "07.11", "07.12"], ["Bandung", "07.13", "07.16"], ["Ciroyom", "07.18", "07.19"], ["Cimahi", "07.24", "07.25"], ["Gadobangkong", "07.30", "07.31"], ["Padalarang", "07.38", "07.38"]]
+    },
+    "BR-B04": {
+      "seri": "KA 331", "arah": "barat", "asal": "Cicalengka", "tujuan": "Padalarang", "kecepatan": 55, "gerbong": 7,
+      "perhentian": [["Cicalengka", "09.20", "09.20"], ["Haurpugur", "09.25", "09.26"], ["Rancaekek", "09.30", "09.31"], ["Cimekar", "09.35", "09.36"], ["Gedebage", "09.40", "09.41"], ["Kiaracondong", "09.48", "09.51"], ["Cikudapateuh", "09.53", "09.54"], ["Bandung", "09.55", "09.58"], ["Ciroyom", "10.00", "10.01"], ["Cimahi", "10.06", "10.07"], ["Gadobangkong", "10.12", "10.13"], ["Padalarang", "10.20", "10.20"]]
+    },
+    "BR-B05": {
+      "seri": "KA 333", "arah": "barat", "asal": "Cicalengka", "tujuan": "Padalarang", "kecepatan": 55, "gerbong": 7,
+      "perhentian": [["Cicalengka", "10.06", "10.06"], ["Haurpugur", "10.11", "10.12"], ["Rancaekek", "10.16", "10.17"], ["Cimekar", "10.21", "10.22"], ["Gedebage", "10.26", "10.27"], ["Kiaracondong", "10.34", "10.37"], ["Cikudapateuh", "10.39", "10.40"], ["Bandung", "10.41", "10.44"], ["Ciroyom", "10.46", "10.47"], ["Cimahi", "10.52", "10.53"], ["Gadobangkong", "10.58", "10.59"], ["Padalarang", "11.06", "11.06"]]
+    },
+    "BR-B06": {
+      "seri": "KA 335", "arah": "barat", "asal": "Cicalengka", "tujuan": "Padalarang", "kecepatan": 55, "gerbong": 7,
+      "perhentian": [["Cicalengka", "10.50", "10.50"], ["Haurpugur", "10.55", "10.56"], ["Rancaekek", "11.00", "11.01"], ["Cimekar", "11.05", "11.06"], ["Gedebage", "11.10", "11.11"], ["Kiaracondong", "11.18", "11.21"], ["Cikudapateuh", "11.23", "11.24"], ["Bandung", "11.25", "11.28"], ["Ciroyom", "11.30", "11.31"], ["Cimahi", "11.36", "11.37"], ["Gadobangkong", "11.42", "11.43"], ["Padalarang", "11.50", "11.50"]]
+    },
+    "BR-B07": {
+      "seri": "KA 337", "arah": "barat", "asal": "Cicalengka", "tujuan": "Padalarang", "kecepatan": 55, "gerbong": 7,
+      "perhentian": [["Cicalengka", "11.50", "11.50"], ["Haurpugur", "11.55", "11.56"], ["Rancaekek", "12.00", "12.01"], ["Cimekar", "12.05", "12.06"], ["Gedebage", "12.10", "12.11"], ["Kiaracondong", "12.18", "12.21"], ["Cikudapateuh", "12.23", "12.24"], ["Bandung", "12.25", "12.28"], ["Ciroyom", "12.30", "12.31"], ["Cimahi", "12.36", "12.37"], ["Gadobangkong", "12.42", "12.43"], ["Padalarang", "12.50", "12.50"]]
+    },
+    "BR-B08": {
+      "seri": "KA 339", "arah": "barat", "asal": "Cicalengka", "tujuan": "Padalarang", "kecepatan": 55, "gerbong": 7,
+      "perhentian": [["Cicalengka", "12.40", "12.40"], ["Haurpugur", "12.45", "12.46"], ["Rancaekek", "12.50", "12.51"], ["Cimekar", "12.55", "12.56"], ["Gedebage", "13.00", "13.01"], ["Kiaracondong", "13.08", "13.11"], ["Cikudapateuh", "13.13", "13.14"], ["Bandung", "13.15", "13.18"], ["Ciroyom", "13.20", "13.21"], ["Cimahi", "13.26", "13.27"], ["Gadobangkong", "13.32", "13.33"], ["Padalarang", "13.40", "13.40"]]
+    },
+    "BR-B09": {
+      "seri": "KA 341", "arah": "barat", "asal": "Cicalengka", "tujuan": "Padalarang", "kecepatan": 55, "gerbong": 7,
+      "perhentian": [["Cicalengka", "13.55", "13.55"], ["Haurpugur", "14.00", "14.01"], ["Rancaekek", "14.05", "14.06"], ["Cimekar", "14.10", "14.11"], ["Gedebage", "14.15", "14.16"], ["Kiaracondong", "14.23", "14.26"], ["Cikudapateuh", "14.28", "14.29"], ["Bandung", "14.30", "14.33"], ["Ciroyom", "14.35", "14.36"], ["Cimahi", "14.41", "14.42"], ["Gadobangkong", "14.47", "14.48"], ["Padalarang", "14.55", "14.55"]]
+    },
+    "BR-B10": {
+      "seri": "KA 343", "arah": "barat", "asal": "Cicalengka", "tujuan": "Padalarang", "kecepatan": 55, "gerbong": 7,
+      "perhentian": [["Cicalengka", "14.33", "14.33"], ["Haurpugur", "14.38", "14.39"], ["Rancaekek", "14.43", "14.44"], ["Cimekar", "14.48", "14.49"], ["Gedebage", "14.53", "14.54"], ["Kiaracondong", "15.01", "15.04"], ["Cikudapateuh", "15.06", "15.07"], ["Bandung", "15.08", "15.11"], ["Ciroyom", "15.13", "15.14"], ["Cimahi", "15.19", "15.20"], ["Gadobangkong", "15.25", "15.26"], ["Padalarang", "15.33", "15.33"]]
+    },
+    "BR-B11": {
+      "seri": "KA 345", "arah": "barat", "asal": "Cicalengka", "tujuan": "Padalarang", "kecepatan": 55, "gerbong": 7,
+      "perhentian": [["Cicalengka", "15.15", "15.15"], ["Haurpugur", "15.20", "15.21"], ["Rancaekek", "15.25", "15.26"], ["Cimekar", "15.30", "15.31"], ["Gedebage", "15.35", "15.36"], ["Kiaracondong", "15.43", "15.46"], ["Cikudapateuh", "15.48", "15.49"], ["Bandung", "15.50", "15.53"], ["Ciroyom", "15.55", "15.56"], ["Cimahi", "16.01", "16.02"], ["Gadobangkong", "16.07", "16.08"], ["Padalarang", "16.15", "16.15"]]
+    },
+    "BR-B12": {
+      "seri": "KA 347", "arah": "barat", "asal": "Cicalengka", "tujuan": "Padalarang", "kecepatan": 55, "gerbong": 7,
+      "perhentian": [["Cicalengka", "16.22", "16.22"], ["Haurpugur", "16.27", "16.28"], ["Rancaekek", "16.32", "16.33"], ["Cimekar", "16.37", "16.38"], ["Gedebage", "16.42", "16.43"], ["Kiaracondong", "16.50", "16.53"], ["Cikudapateuh", "16.55", "16.56"], ["Bandung", "16.57", "17.00"], ["Ciroyom", "17.02", "17.03"], ["Cimahi", "17.08", "17.09"], ["Gadobangkong", "17.14", "17.15"], ["Padalarang", "17.22", "17.22"]]
+    },
+    "BR-B13": {
+      "seri": "KA 349", "arah": "barat", "asal": "Cicalengka", "tujuan": "Padalarang", "kecepatan": 55, "gerbong": 7,
+      "perhentian": [["Cicalengka", "17.36", "17.36"], ["Haurpugur", "17.41", "17.42"], ["Rancaekek", "17.46", "17.47"], ["Cimekar", "17.51", "17.52"], ["Gedebage", "17.56", "17.57"], ["Kiaracondong", "18.04", "18.07"], ["Cikudapateuh", "18.09", "18.10"], ["Bandung", "18.11", "18.14"], ["Ciroyom", "18.16", "18.17"], ["Cimahi", "18.22", "18.23"], ["Gadobangkong", "18.28", "18.29"], ["Padalarang", "18.36", "18.36"]]
+    },
+    "BR-B14": {
+      "seri": "KA 351", "arah": "barat", "asal": "Cicalengka", "tujuan": "Padalarang", "kecepatan": 55, "gerbong": 7,
+      "perhentian": [["Cicalengka", "18.50", "18.50"], ["Haurpugur", "18.55", "18.56"], ["Rancaekek", "19.00", "19.01"], ["Cimekar", "19.05", "19.06"], ["Gedebage", "19.10", "19.11"], ["Kiaracondong", "19.18", "19.21"], ["Cikudapateuh", "19.23", "19.24"], ["Bandung", "19.25", "19.28"], ["Ciroyom", "19.30", "19.31"], ["Cimahi", "19.36", "19.37"], ["Gadobangkong", "19.42", "19.43"], ["Padalarang", "19.50", "19.50"]]
+    },
+    "BR-B15": {
+      "seri": "KA 353", "arah": "barat", "asal": "Cicalengka", "tujuan": "Padalarang", "kecepatan": 55, "gerbong": 7,
+      "perhentian": [["Cicalengka", "19.15", "19.15"], ["Haurpugur", "19.20", "19.21"], ["Rancaekek", "19.25", "19.26"], ["Cimekar", "19.30", "19.31"], ["Gedebage", "19.35", "19.36"], ["Kiaracondong", "19.43", "19.46"], ["Cikudapateuh", "19.48", "19.49"], ["Bandung", "19.50", "19.53"], ["Ciroyom", "19.55", "19.56"], ["Cimahi", "20.01", "20.02"], ["Gadobangkong", "20.07", "20.08"], ["Padalarang", "20.15", "20.15"]]
+    },
+    "BR-B16": {
+      "seri": "KA 355", "arah": "barat", "asal": "Cicalengka", "tujuan": "Padalarang", "kecepatan": 55, "gerbong": 7,
+      "perhentian": [["Cicalengka", "19.50", "19.50"], ["Haurpugur", "19.55", "19.56"], ["Rancaekek", "20.00", "20.01"], ["Cimekar", "20.05", "20.06"], ["Gedebage", "20.10", "20.11"], ["Kiaracondong", "20.18", "20.21"], ["Cikudapateuh", "20.23", "20.24"], ["Bandung", "20.25", "20.28"], ["Ciroyom", "20.30", "20.31"], ["Cimahi", "20.36", "20.37"], ["Gadobangkong", "20.42", "20.43"], ["Padalarang", "20.50", "20.50"]]
+    },
+    "BR-B17": {
+      "seri": "KA 357", "arah": "barat", "asal": "Cicalengka", "tujuan": "Padalarang", "kecepatan": 55, "gerbong": 7,
+      "perhentian": [["Cicalengka", "22.25", "22.25"], ["Haurpugur", "22.30", "22.31"], ["Rancaekek", "22.35", "22.36"], ["Cimekar", "22.40", "22.41"], ["Gedebage", "22.45", "22.46"], ["Kiaracondong", "22.53", "22.56"], ["Cikudapateuh", "22.58", "22.59"], ["Bandung", "23.00", "23.03"], ["Ciroyom", "23.05", "23.06"], ["Cimahi", "23.11", "23.12"], ["Gadobangkong", "23.17", "23.18"], ["Padalarang", "23.25", "23.25"]]
+    },
+    "BR-T01": {
+      "seri": "KA 342", "arah": "timur", "asal": "Padalarang", "tujuan": "Cicalengka", "kecepatan": 61, "gerbong": 7,
+      "perhentian": [["Padalarang", "04.00", "04.00"], ["Gadobangkong", "04.06", "04.07"], ["Cimahi", "04.11", "04.12"], ["Ciroyom", "04.17", "04.18"], ["Bandung", "04.20", "04.23"], ["Cikudapateuh", "04.24", "04.25"], ["Kiaracondong", "04.27", "04.30"], ["Gedebage", "04.36", "04.37"], ["Cimekar", "04.41", "04.42"], ["Rancaekek", "04.45", "04.46"], ["Haurpugur", "04.50", "04.51"], ["Cicalengka", "04.55", "04.55"]]
+    },
+    "BR-T02": {
+      "seri": "KA 344", "arah": "timur", "asal": "Padalarang", "tujuan": "Cicalengka", "kecepatan": 61, "gerbong": 7,
+      "perhentian": [["Padalarang", "04.40", "04.40"], ["Gadobangkong", "04.46", "04.47"], ["Cimahi", "04.51", "04.52"], ["Ciroyom", "04.57", "04.58"], ["Bandung", "05.00", "05.03"], ["Cikudapateuh", "05.04", "05.05"], ["Kiaracondong", "05.07", "05.10"], ["Gedebage", "05.16", "05.17"], ["Cimekar", "05.21", "05.22"], ["Rancaekek", "05.25", "05.26"], ["Haurpugur", "05.30", "05.31"], ["Cicalengka", "05.35", "05.35"]]
+    },
+    "BR-T03": {
+      "seri": "KA 346", "arah": "timur", "asal": "Padalarang", "tujuan": "Cicalengka", "kecepatan": 61, "gerbong": 7,
+      "perhentian": [["Padalarang", "06.57", "06.57"], ["Gadobangkong", "07.03", "07.04"], ["Cimahi", "07.08", "07.09"], ["Ciroyom", "07.14", "07.15"], ["Bandung", "07.17", "07.20"], ["Cikudapateuh", "07.21", "07.22"], ["Kiaracondong", "07.24", "07.27"], ["Gedebage", "07.33", "07.34"], ["Cimekar", "07.38", "07.39"], ["Rancaekek", "07.42", "07.43"], ["Haurpugur", "07.47", "07.48"], ["Cicalengka", "07.52", "07.52"]]
+    },
+    "BR-T04": {
+      "seri": "KA 348", "arah": "timur", "asal": "Padalarang", "tujuan": "Cicalengka", "kecepatan": 61, "gerbong": 7,
+      "perhentian": [["Padalarang", "07.47", "07.47"], ["Gadobangkong", "07.53", "07.54"], ["Cimahi", "07.58", "07.59"], ["Ciroyom", "08.04", "08.05"], ["Bandung", "08.07", "08.10"], ["Cikudapateuh", "08.11", "08.12"], ["Kiaracondong", "08.14", "08.17"], ["Gedebage", "08.23", "08.24"], ["Cimekar", "08.28", "08.29"], ["Rancaekek", "08.32", "08.33"], ["Haurpugur", "08.37", "08.38"], ["Cicalengka", "08.42", "08.42"]]
+    },
+    "BR-T05": {
+      "seri": "KA 350", "arah": "timur", "asal": "Padalarang", "tujuan": "Cicalengka", "kecepatan": 61, "gerbong": 7,
+      "perhentian": [["Padalarang", "08.25", "08.25"], ["Gadobangkong", "08.31", "08.32"], ["Cimahi", "08.36", "08.37"], ["Ciroyom", "08.42", "08.43"], ["Bandung", "08.45", "08.48"], ["Cikudapateuh", "08.49", "08.50"], ["Kiaracondong", "08.52", "08.55"], ["Gedebage", "09.01", "09.02"], ["Cimekar", "09.06", "09.07"], ["Rancaekek", "09.10", "09.11"], ["Haurpugur", "09.15", "09.16"], ["Cicalengka", "09.20", "09.20"]]
+    },
+    "BR-T06": {
+      "seri": "KA 352", "arah": "timur", "asal": "Padalarang", "tujuan": "Cicalengka", "kecepatan": 61, "gerbong": 7,
+      "perhentian": [["Padalarang", "09.27", "09.27"], ["Gadobangkong", "09.33", "09.34"], ["Cimahi", "09.38", "09.39"], ["Ciroyom", "09.44", "09.45"], ["Bandung", "09.47", "09.50"], ["Cikudapateuh", "09.51", "09.52"], ["Kiaracondong", "09.54", "09.57"], ["Gedebage", "10.03", "10.04"], ["Cimekar", "10.08", "10.09"], ["Rancaekek", "10.12", "10.13"], ["Haurpugur", "10.17", "10.18"], ["Cicalengka", "10.22", "10.22"]]
+    },
+    "BR-T07": {
+      "seri": "KA 354", "arah": "timur", "asal": "Padalarang", "tujuan": "Cicalengka", "kecepatan": 61, "gerbong": 7,
+      "perhentian": [["Padalarang", "10.20", "10.20"], ["Gadobangkong", "10.26", "10.27"], ["Cimahi", "10.31", "10.32"], ["Ciroyom", "10.37", "10.38"], ["Bandung", "10.40", "10.43"], ["Cikudapateuh", "10.44", "10.45"], ["Kiaracondong", "10.47", "10.50"], ["Gedebage", "10.56", "10.57"], ["Cimekar", "11.01", "11.02"], ["Rancaekek", "11.05", "11.06"], ["Haurpugur", "11.10", "11.11"], ["Cicalengka", "11.15", "11.15"]]
+    },
+    "BR-T08": {
+      "seri": "KA 356", "arah": "timur", "asal": "Padalarang", "tujuan": "Cicalengka", "kecepatan": 61, "gerbong": 7,
+      "perhentian": [["Padalarang", "11.30", "11.30"], ["Gadobangkong", "11.36", "11.37"], ["Cimahi", "11.41", "11.42"], ["Ciroyom", "11.47", "11.48"], ["Bandung", "11.50", "11.53"], ["Cikudapateuh", "11.54", "11.55"], ["Kiaracondong", "11.57", "12.00"], ["Gedebage", "12.06", "12.07"], ["Cimekar", "12.11", "12.12"], ["Rancaekek", "12.15", "12.16"], ["Haurpugur", "12.20", "12.21"], ["Cicalengka", "12.25", "12.25"]]
+    },
+    "BR-T09": {
+      "seri": "KA 358", "arah": "timur", "asal": "Padalarang", "tujuan": "Cicalengka", "kecepatan": 61, "gerbong": 7,
+      "perhentian": [["Padalarang", "12.15", "12.15"], ["Gadobangkong", "12.21", "12.22"], ["Cimahi", "12.26", "12.27"], ["Ciroyom", "12.32", "12.33"], ["Bandung", "12.35", "12.38"], ["Cikudapateuh", "12.39", "12.40"], ["Kiaracondong", "12.42", "12.45"], ["Gedebage", "12.51", "12.52"], ["Cimekar", "12.56", "12.57"], ["Rancaekek", "13.00", "13.01"], ["Haurpugur", "13.05", "13.06"], ["Cicalengka", "13.10", "13.10"]]
+    },
+    "BR-T10": {
+      "seri": "KA 360", "arah": "timur", "asal": "Padalarang", "tujuan": "Cicalengka", "kecepatan": 61, "gerbong": 7,
+      "perhentian": [["Padalarang", "13.16", "13.16"], ["Gadobangkong", "13.22", "13.23"], ["Cimahi", "13.27", "13.28"], ["Ciroyom", "13.33", "13.34"], ["Bandung", "13.36", "13.39"], ["Cikudapateuh", "13.40", "13.41"], ["Kiaracondong", "13.43", "13.46"], ["Gedebage", "13.52", "13.53"], ["Cimekar", "13.57", "13.58"], ["Rancaekek", "14.01", "14.02"], ["Haurpugur", "14.06", "14.07"], ["Cicalengka", "14.11", "14.11"]]
+    },
+    "BR-T11": {
+      "seri": "KA 362", "arah": "timur", "asal": "Padalarang", "tujuan": "Cicalengka", "kecepatan": 61, "gerbong": 7,
+      "perhentian": [["Padalarang", "14.17", "14.17"], ["Gadobangkong", "14.23", "14.24"], ["Cimahi", "14.28", "14.29"], ["Ciroyom", "14.34", "14.35"], ["Bandung", "14.37", "14.40"], ["Cikudapateuh", "14.41", "14.42"], ["Kiaracondong", "14.44", "14.47"], ["Gedebage", "14.53", "14.54"], ["Cimekar", "14.58", "14.59"], ["Rancaekek", "15.02", "15.03"], ["Haurpugur", "15.07", "15.08"], ["Cicalengka", "15.12", "15.12"]]
+    },
+    "BR-T12": {
+      "seri": "KA 364", "arah": "timur", "asal": "Padalarang", "tujuan": "Cicalengka", "kecepatan": 61, "gerbong": 7,
+      "perhentian": [["Padalarang", "15.24", "15.24"], ["Gadobangkong", "15.30", "15.31"], ["Cimahi", "15.35", "15.36"], ["Ciroyom", "15.41", "15.42"], ["Bandung", "15.44", "15.47"], ["Cikudapateuh", "15.48", "15.49"], ["Kiaracondong", "15.51", "15.54"], ["Gedebage", "16.00", "16.01"], ["Cimekar", "16.05", "16.06"], ["Rancaekek", "16.09", "16.10"], ["Haurpugur", "16.14", "16.15"], ["Cicalengka", "16.19", "16.19"]]
+    },
+    "BR-T13": {
+      "seri": "KA 366", "arah": "timur", "asal": "Padalarang", "tujuan": "Cicalengka", "kecepatan": 61, "gerbong": 7,
+      "perhentian": [["Padalarang", "16.15", "16.15"], ["Gadobangkong", "16.21", "16.22"], ["Cimahi", "16.26", "16.27"], ["Ciroyom", "16.32", "16.33"], ["Bandung", "16.35", "16.38"], ["Cikudapateuh", "16.39", "16.40"], ["Kiaracondong", "16.42", "16.45"], ["Gedebage", "16.51", "16.52"], ["Cimekar", "16.56", "16.57"], ["Rancaekek", "17.00", "17.01"], ["Haurpugur", "17.05", "17.06"], ["Cicalengka", "17.10", "17.10"]]
+    },
+    "BR-T14": {
+      "seri": "KA 368", "arah": "timur", "asal": "Padalarang", "tujuan": "Cicalengka", "kecepatan": 61, "gerbong": 7,
+      "perhentian": [["Padalarang", "16.50", "16.50"], ["Gadobangkong", "16.56", "16.57"], ["Cimahi", "17.01", "17.02"], ["Ciroyom", "17.07", "17.08"], ["Bandung", "17.10", "17.13"], ["Cikudapateuh", "17.14", "17.15"], ["Kiaracondong", "17.17", "17.20"], ["Gedebage", "17.26", "17.27"], ["Cimekar", "17.31", "17.32"], ["Rancaekek", "17.35", "17.36"], ["Haurpugur", "17.40", "17.41"], ["Cicalengka", "17.45", "17.45"]]
+    },
+    "BR-T15": {
+      "seri": "KA 370", "arah": "timur", "asal": "Padalarang", "tujuan": "Cicalengka", "kecepatan": 61, "gerbong": 7,
+      "perhentian": [["Padalarang", "17.20", "17.20"], ["Gadobangkong", "17.26", "17.27"], ["Cimahi", "17.31", "17.32"], ["Ciroyom", "17.37", "17.38"], ["Bandung", "17.40", "17.43"], ["Cikudapateuh", "17.44", "17.45"], ["Kiaracondong", "17.47", "17.50"], ["Gedebage", "17.56", "17.57"], ["Cimekar", "18.01", "18.02"], ["Rancaekek", "18.05", "18.06"], ["Haurpugur", "18.10", "18.11"], ["Cicalengka", "18.15", "18.15"]]
+    },
+    "BR-T16": {
+      "seri": "KA 372", "arah": "timur", "asal": "Padalarang", "tujuan": "Cicalengka", "kecepatan": 61, "gerbong": 7,
+      "perhentian": [["Padalarang", "18.48", "18.48"], ["Gadobangkong", "18.54", "18.55"], ["Cimahi", "18.59", "19.00"], ["Ciroyom", "19.05", "19.06"], ["Bandung", "19.08", "19.11"], ["Cikudapateuh", "19.12", "19.13"], ["Kiaracondong", "19.15", "19.18"], ["Gedebage", "19.24", "19.25"], ["Cimekar", "19.29", "19.30"], ["Rancaekek", "19.33", "19.34"], ["Haurpugur", "19.38", "19.39"], ["Cicalengka", "19.43", "19.43"]]
+    },
+    "BR-T17": {
+      "seri": "KA 374", "arah": "timur", "asal": "Padalarang", "tujuan": "Cicalengka", "kecepatan": 61, "gerbong": 7,
+      "perhentian": [["Padalarang", "20.00", "20.00"], ["Gadobangkong", "20.06", "20.07"], ["Cimahi", "20.11", "20.12"], ["Ciroyom", "20.17", "20.18"], ["Bandung", "20.20", "20.23"], ["Cikudapateuh", "20.24", "20.25"], ["Kiaracondong", "20.27", "20.30"], ["Gedebage", "20.36", "20.37"], ["Cimekar", "20.41", "20.42"], ["Rancaekek", "20.45", "20.46"], ["Haurpugur", "20.50", "20.51"], ["Cicalengka", "20.55", "20.55"]]
+    },
+    "BR-T18": {
+      "seri": "KA 376", "arah": "timur", "asal": "Padalarang", "tujuan": "Cicalengka", "kecepatan": 61, "gerbong": 7,
+      "perhentian": [["Padalarang", "21.17", "21.17"], ["Gadobangkong", "21.23", "21.24"], ["Cimahi", "21.28", "21.29"], ["Ciroyom", "21.34", "21.35"], ["Bandung", "21.37", "21.40"], ["Cikudapateuh", "21.41", "21.42"], ["Kiaracondong", "21.44", "21.47"], ["Gedebage", "21.53", "21.54"], ["Cimekar", "21.58", "21.59"], ["Rancaekek", "22.02", "22.03"], ["Haurpugur", "22.07", "22.08"], ["Cicalengka", "22.12", "22.12"]]
+    },
+    "BR-T19": {
+      "seri": "KA 398A", "arah": "timur", "asal": "Padalarang", "tujuan": "Cicalengka", "kecepatan": 61, "gerbong": 7,
+      "perhentian": [["Padalarang", "21.46", "21.46"], ["Gadobangkong", "21.52", "21.53"], ["Cimahi", "21.57", "21.58"], ["Ciroyom", "22.03", "22.04"], ["Bandung", "22.06", "22.09"], ["Cikudapateuh", "22.10", "22.11"], ["Kiaracondong", "22.13", "22.16"], ["Gedebage", "22.22", "22.23"], ["Cimekar", "22.27", "22.28"], ["Rancaekek", "22.31", "22.32"], ["Haurpugur", "22.36", "22.37"], ["Cicalengka", "22.41", "22.41"]]
+    }
+  },
+  "jadwal": {
+    "2026-11-01": ["BR-T01", "BR-T02", "BR-B01", "BR-B02", "BR-B03", "BR-T03", "BR-T04", "BR-T05", "BR-B04", "BR-T06", "BR-B05", "BR-T07", "BR-B06", "BR-T08", "BR-B07", "BR-T09", "BR-B08", "BR-T10", "BR-B09", "BR-T11", "BR-B10", "BR-B11", "BR-T12", "BR-T13", "BR-B12", "BR-T14", "BR-T15", "BR-B13", "BR-T16", "BR-B14", "BR-B15", "BR-B16", "BR-T17", "BR-T18", "BR-T19", "BR-B17"],
+    "2026-11-02": ["BR-T01", "BR-T02", "BR-B01", "BR-B02", "BR-B03", "BR-T03", "BR-T04", "BR-T05", "BR-B04", "BR-T06", "BR-B05", "BR-T07", "BR-B06", "BR-T08", "BR-B07", "BR-T09", "BR-B08", "BR-T10", "BR-B09", "BR-T11", "BR-B10", "BR-B11", "BR-T12", "BR-T13", "BR-B12", "BR-T14", "BR-T15", "BR-B13", "BR-T16", "BR-B14", "BR-B15", "BR-B16", "BR-T17", "BR-T18", "BR-T19", "BR-B17"],
+    "2026-11-03": ["BR-T01", "BR-T02", "BR-B01", "BR-B02", "BR-B03", "BR-T03", "BR-T04", "BR-T05", "BR-B04", "BR-T06", "BR-B05", "BR-T07", "BR-B06", "BR-T08", "BR-B07", "BR-T09", "BR-B08", "BR-T10", "BR-B09", "BR-T11", "BR-B10", "BR-B11", "BR-T12", "BR-T13", "BR-B12", "BR-T14", "BR-T15", "BR-B13", "BR-T16", "BR-B14", "BR-B15", "BR-B16", "BR-T17", "BR-T18", "BR-T19", "BR-B17"],
+    "2026-11-04": ["BR-T01", "BR-T02", "BR-B01", "BR-B02", "BR-B03", "BR-T03", "BR-T04", "BR-T05", "BR-B04", "BR-T06", "BR-B05", "BR-T07", "BR-B06", "BR-T08", "BR-B07", "BR-T09", "BR-B08", "BR-T10", "BR-B09", "BR-T11", "BR-B10", "BR-B11", "BR-T12", "BR-T13", "BR-B12", "BR-T14", "BR-T15", "BR-B13", "BR-T16", "BR-B14", "BR-B15", "BR-B16", "BR-T17", "BR-T18", "BR-T19", "BR-B17"],
+    "2026-11-05": ["BR-T01", "BR-T02", "BR-B01", "BR-B02", "BR-B03", "BR-T03", "BR-T04", "BR-T05", "BR-B04", "BR-T06", "BR-B05", "BR-T07", "BR-B06", "BR-T08", "BR-B07", "BR-T09", "BR-B08", "BR-T10", "BR-B09", "BR-T11", "BR-B10", "BR-B11", "BR-T12", "BR-T13", "BR-B12", "BR-T14", "BR-T15", "BR-B13", "BR-T16", "BR-B14", "BR-B15", "BR-B16", "BR-T17", "BR-T18", "BR-T19", "BR-B17"],
+    "2026-11-06": ["BR-T01", "BR-T02", "BR-B01", "BR-B02", "BR-B03", "BR-T03", "BR-T04", "BR-T05", "BR-B04", "BR-T06", "BR-B05", "BR-T07", "BR-B06", "BR-T08", "BR-B07", "BR-T09", "BR-B08", "BR-T10", "BR-B09", "BR-T11", "BR-B10", "BR-B11", "BR-T12", "BR-T13", "BR-B12", "BR-T14", "BR-T15", "BR-B13", "BR-T16", "BR-B14", "BR-B15", "BR-B16", "BR-T17", "BR-T18", "BR-T19", "BR-B17"],
+    "2026-11-07": ["BR-T01", "BR-T02", "BR-B01", "BR-B02", "BR-B03", "BR-T03", "BR-T04", "BR-T05", "BR-B04", "BR-T06", "BR-B05", "BR-T07", "BR-B06", "BR-T08", "BR-B07", "BR-T09", "BR-B08", "BR-T10", "BR-B09", "BR-T11", "BR-B10", "BR-B11", "BR-T12", "BR-T13", "BR-B12", "BR-T14", "BR-T15", "BR-B13", "BR-T16", "BR-B14", "BR-B15", "BR-B16", "BR-T17", "BR-T18", "BR-T19", "BR-B17"],
+    "2026-11-08": ["BR-T01", "BR-T02", "BR-B01", "BR-B02", "BR-B03", "BR-T03", "BR-T04", "BR-T05", "BR-B04", "BR-T06", "BR-B05", "BR-T07", "BR-B06", "BR-T08", "BR-B07", "BR-T09", "BR-B08", "BR-T10", "BR-B09", "BR-T11", "BR-B10", "BR-B11", "BR-T12", "BR-T13", "BR-B12", "BR-T14", "BR-T15", "BR-B13", "BR-T16", "BR-B14", "BR-B15", "BR-B16", "BR-T17", "BR-T18", "BR-T19", "BR-B17"],
+    "2026-11-09": ["BR-T01", "BR-T02", "BR-B01", "BR-B02", "BR-B03", "BR-T03", "BR-T04", "BR-T05", "BR-B04", "BR-T06", "BR-B05", "BR-T07", "BR-B06", "BR-T08", "BR-B07", "BR-T09", "BR-B08", "BR-T10", "BR-B09", "BR-T11", "BR-B10", "BR-B11", "BR-T12", "BR-T13", "BR-B12", "BR-T14", "BR-T15", "BR-B13", "BR-T16", "BR-B14", "BR-B15", "BR-B16", "BR-T17", "BR-T18", "BR-T19", "BR-B17"],
+    "2026-11-10": ["BR-T01", "BR-T02", "BR-B01", "BR-B02", "BR-B03", "BR-T03", "BR-T04", "BR-T05", "BR-B04", "BR-T06", "BR-B05", "BR-T07", "BR-B06", "BR-T08", "BR-B07", "BR-T09", "BR-B08", "BR-T10", "BR-B09", "BR-T11", "BR-B10", "BR-B11", "BR-T12", "BR-T13", "BR-B12", "BR-T14", "BR-T15", "BR-B13", "BR-T16", "BR-B14", "BR-B15", "BR-B16", "BR-T17", "BR-T18", "BR-T19", "BR-B17"],
+    "2026-11-11": ["BR-T01", "BR-T02", "BR-B01", "BR-B02", "BR-B03", "BR-T03", "BR-T04", "BR-T05", "BR-B04", "BR-T06", "BR-B05", "BR-T07", "BR-B06", "BR-T08", "BR-B07", "BR-T09", "BR-B08", "BR-T10", "BR-B09", "BR-T11", "BR-B10", "BR-B11", "BR-T12", "BR-T13", "BR-B12", "BR-T14", "BR-T15", "BR-B13", "BR-T16", "BR-B14", "BR-B15", "BR-B16", "BR-T17", "BR-T18", "BR-T19", "BR-B17"],
+    "2026-11-12": ["BR-T01", "BR-T02", "BR-B01", "BR-B02", "BR-B03", "BR-T03", "BR-T04", "BR-T05", "BR-B04", "BR-T06", "BR-B05", "BR-T07", "BR-B06", "BR-T08", "BR-B07", "BR-T09", "BR-B08", "BR-T10", "BR-B09", "BR-T11", "BR-B10", "BR-B11", "BR-T12", "BR-T13", "BR-B12", "BR-T14", "BR-T15", "BR-B13", "BR-T16", "BR-B14", "BR-B15", "BR-B16", "BR-T17", "BR-T18", "BR-T19", "BR-B17"],
+    "2026-11-13": ["BR-T01", "BR-T02", "BR-B01", "BR-B02", "BR-B03", "BR-T03", "BR-T04", "BR-T05", "BR-B04", "BR-T06", "BR-B05", "BR-T07", "BR-B06", "BR-T08", "BR-B07", "BR-T09", "BR-B08", "BR-T10", "BR-B09", "BR-T11", "BR-B10", "BR-B11", "BR-T12", "BR-T13", "BR-B12", "BR-T14", "BR-T15", "BR-B13", "BR-T16", "BR-B14", "BR-B15", "BR-B16", "BR-T17", "BR-T18", "BR-T19", "BR-B17"],
+    "2026-11-14": ["BR-T01", "BR-T02", "BR-B01", "BR-B02", "BR-B03", "BR-T03", "BR-T04", "BR-T05", "BR-B04", "BR-T06", "BR-B05", "BR-T07", "BR-B06", "BR-T08", "BR-B07", "BR-T09", "BR-B08", "BR-T10", "BR-B09", "BR-T11", "BR-B10", "BR-B11", "BR-T12", "BR-T13", "BR-B12", "BR-T14", "BR-T15", "BR-B13", "BR-T16", "BR-B14", "BR-B15", "BR-B16", "BR-T17", "BR-T18", "BR-T19", "BR-B17"],
+    "2026-11-15": ["BR-T01", "BR-T02", "BR-B01", "BR-B02", "BR-B03", "BR-T03", "BR-T04", "BR-T05", "BR-B04", "BR-T06", "BR-B05", "BR-T07", "BR-B06", "BR-T08", "BR-B07", "BR-T09", "BR-B08", "BR-T10", "BR-B09", "BR-T11", "BR-B10", "BR-B11", "BR-T12", "BR-T13", "BR-B12", "BR-T14", "BR-T15", "BR-B13", "BR-T16", "BR-B14", "BR-B15", "BR-B16", "BR-T17", "BR-T18", "BR-T19", "BR-B17"],
+    "2026-11-16": ["BR-T01", "BR-T02", "BR-B01", "BR-B02", "BR-B03", "BR-T03", "BR-T04", "BR-T05", "BR-B04", "BR-T06", "BR-B05", "BR-T07", "BR-B06", "BR-T08", "BR-B07", "BR-T09", "BR-B08", "BR-T10", "BR-B09", "BR-T11", "BR-B10", "BR-B11", "BR-T12", "BR-T13", "BR-B12", "BR-T14", "BR-T15", "BR-B13", "BR-T16", "BR-B14", "BR-B15", "BR-B16", "BR-T17", "BR-T18", "BR-T19", "BR-B17"],
+    "2026-11-17": ["BR-T01", "BR-T02", "BR-B01", "BR-B02", "BR-B03", "BR-T03", "BR-T04", "BR-T05", "BR-B04", "BR-T06", "BR-B05", "BR-T07", "BR-B06", "BR-T08", "BR-B07", "BR-T09", "BR-B08", "BR-T10", "BR-B09", "BR-T11", "BR-B10", "BR-B11", "BR-T12", "BR-T13", "BR-B12", "BR-T14", "BR-T15", "BR-B13", "BR-T16", "BR-B14", "BR-B15", "BR-B16", "BR-T17", "BR-T18", "BR-T19", "BR-B17"],
+    "2026-11-18": ["BR-T01", "BR-T02", "BR-B01", "BR-B02", "BR-B03", "BR-T03", "BR-T04", "BR-T05", "BR-B04", "BR-T06", "BR-B05", "BR-T07", "BR-B06", "BR-T08", "BR-B07", "BR-T09", "BR-B08", "BR-T10", "BR-B09", "BR-T11", "BR-B10", "BR-B11", "BR-T12", "BR-T13", "BR-B12", "BR-T14", "BR-T15", "BR-B13", "BR-T16", "BR-B14", "BR-B15", "BR-B16", "BR-T17", "BR-T18", "BR-T19", "BR-B17"],
+    "2026-11-19": ["BR-T01", "BR-T02", "BR-B01", "BR-B02", "BR-B03", "BR-T03", "BR-T04", "BR-T05", "BR-B04", "BR-T06", "BR-B05", "BR-T07", "BR-B06", "BR-T08", "BR-B07", "BR-T09", "BR-B08", "BR-T10", "BR-B09", "BR-T11", "BR-B10", "BR-B11", "BR-T12", "BR-T13", "BR-B12", "BR-T14", "BR-T15", "BR-B13", "BR-T16", "BR-B14", "BR-B15", "BR-B16", "BR-T17", "BR-T18", "BR-T19", "BR-B17"],
+    "2026-11-20": ["BR-T01", "BR-T02", "BR-B01", "BR-B02", "BR-B03", "BR-T03", "BR-T04", "BR-T05", "BR-B04", "BR-T06", "BR-B05", "BR-T07", "BR-B06", "BR-T08", "BR-B07", "BR-T09", "BR-B08", "BR-T10", "BR-B09", "BR-T11", "BR-B10", "BR-B11", "BR-T12", "BR-T13", "BR-B12", "BR-T14", "BR-T15", "BR-B13", "BR-T16", "BR-B14", "BR-B15", "BR-B16", "BR-T17", "BR-T18", "BR-T19", "BR-B17"],
+    "2026-11-21": ["BR-T01", "BR-T02", "BR-B01", "BR-B02", "BR-B03", "BR-T03", "BR-T04", "BR-T05", "BR-B04", "BR-T06", "BR-B05", "BR-T07", "BR-B06", "BR-T08", "BR-B07", "BR-T09", "BR-B08", "BR-T10", "BR-B09", "BR-T11", "BR-B10", "BR-B11", "BR-T12", "BR-T13", "BR-B12", "BR-T14", "BR-T15", "BR-B13", "BR-T16", "BR-B14", "BR-B15", "BR-B16", "BR-T17", "BR-T18", "BR-T19", "BR-B17"],
+    "2026-11-22": ["BR-T01", "BR-T02", "BR-B01", "BR-B02", "BR-B03", "BR-T03", "BR-T04", "BR-T05", "BR-B04", "BR-T06", "BR-B05", "BR-T07", "BR-B06", "BR-T08", "BR-B07", "BR-T09", "BR-B08", "BR-T10", "BR-B09", "BR-T11", "BR-B10", "BR-B11", "BR-T12", "BR-T13", "BR-B12", "BR-T14", "BR-T15", "BR-B13", "BR-T16", "BR-B14", "BR-B15", "BR-B16", "BR-T17", "BR-T18", "BR-T19", "BR-B17"],
+    "2026-11-23": ["BR-T01", "BR-T02", "BR-B01", "BR-B02", "BR-B03", "BR-T03", "BR-T04", "BR-T05", "BR-B04", "BR-T06", "BR-B05", "BR-T07", "BR-B06", "BR-T08", "BR-B07", "BR-T09", "BR-B08", "BR-T10", "BR-B09", "BR-T11", "BR-B10", "BR-B11", "BR-T12", "BR-T13", "BR-B12", "BR-T14", "BR-T15", "BR-B13", "BR-T16", "BR-B14", "BR-B15", "BR-B16", "BR-T17", "BR-T18", "BR-T19", "BR-B17"],
+    "2026-11-24": ["BR-T01", "BR-T02", "BR-B01", "BR-B02", "BR-B03", "BR-T03", "BR-T04", "BR-T05", "BR-B04", "BR-T06", "BR-B05", "BR-T07", "BR-B06", "BR-T08", "BR-B07", "BR-T09", "BR-B08", "BR-T10", "BR-B09", "BR-T11", "BR-B10", "BR-B11", "BR-T12", "BR-T13", "BR-B12", "BR-T14", "BR-T15", "BR-B13", "BR-T16", "BR-B14", "BR-B15", "BR-B16", "BR-T17", "BR-T18", "BR-T19", "BR-B17"],
+    "2026-11-25": ["BR-T01", "BR-T02", "BR-B01", "BR-B02", "BR-B03", "BR-T03", "BR-T04", "BR-T05", "BR-B04", "BR-T06", "BR-B05", "BR-T07", "BR-B06", "BR-T08", "BR-B07", "BR-T09", "BR-B08", "BR-T10", "BR-B09", "BR-T11", "BR-B10", "BR-B11", "BR-T12", "BR-T13", "BR-B12", "BR-T14", "BR-T15", "BR-B13", "BR-T16", "BR-B14", "BR-B15", "BR-B16", "BR-T17", "BR-T18", "BR-T19", "BR-B17"],
+    "2026-11-26": ["BR-T01", "BR-T02", "BR-B01", "BR-B02", "BR-B03", "BR-T03", "BR-T04", "BR-T05", "BR-B04", "BR-T06", "BR-B05", "BR-T07", "BR-B06", "BR-T08", "BR-B07", "BR-T09", "BR-B08", "BR-T10", "BR-B09", "BR-T11", "BR-B10", "BR-B11", "BR-T12", "BR-T13", "BR-B12", "BR-T14", "BR-T15", "BR-B13", "BR-T16", "BR-B14", "BR-B15", "BR-B16", "BR-T17", "BR-T18", "BR-T19", "BR-B17"],
+    "2026-11-27": ["BR-T01", "BR-T02", "BR-B01", "BR-B02", "BR-B03", "BR-T03", "BR-T04", "BR-T05", "BR-B04", "BR-T06", "BR-B05", "BR-T07", "BR-B06", "BR-T08", "BR-B07", "BR-T09", "BR-B08", "BR-T10", "BR-B09", "BR-T11", "BR-B10", "BR-B11", "BR-T12", "BR-T13", "BR-B12", "BR-T14", "BR-T15", "BR-B13", "BR-T16", "BR-B14", "BR-B15", "BR-B16", "BR-T17", "BR-T18", "BR-T19", "BR-B17"],
+    "2026-11-28": ["BR-T01", "BR-T02", "BR-B01", "BR-B02", "BR-B03", "BR-T03", "BR-T04", "BR-T05", "BR-B04", "BR-T06", "BR-B05", "BR-T07", "BR-B06", "BR-T08", "BR-B07", "BR-T09", "BR-B08", "BR-T10", "BR-B09", "BR-T11", "BR-B10", "BR-B11", "BR-T12", "BR-T13", "BR-B12", "BR-T14", "BR-T15", "BR-B13", "BR-T16", "BR-B14", "BR-B15", "BR-B16", "BR-T17", "BR-T18", "BR-T19", "BR-B17"],
+    "2026-11-29": ["BR-T01", "BR-T02", "BR-B01", "BR-B02", "BR-B03", "BR-T03", "BR-T04", "BR-T05", "BR-B04", "BR-T06", "BR-B05", "BR-T07", "BR-B06", "BR-T08", "BR-B07", "BR-T09", "BR-B08", "BR-T10", "BR-B09", "BR-T11", "BR-B10", "BR-B11", "BR-T12", "BR-T13", "BR-B12", "BR-T14", "BR-T15", "BR-B13", "BR-T16", "BR-B14", "BR-B15", "BR-B16", "BR-T17", "BR-T18", "BR-T19", "BR-B17"],
+    "2026-11-30": ["BR-T01", "BR-T02", "BR-B01", "BR-B02", "BR-B03", "BR-T03", "BR-T04", "BR-T05", "BR-B04", "BR-T06", "BR-B05", "BR-T07", "BR-B06", "BR-T08", "BR-B07", "BR-T09", "BR-B08", "BR-T10", "BR-B09", "BR-T11", "BR-B10", "BR-B11", "BR-T12", "BR-T13", "BR-B12", "BR-T14", "BR-T15", "BR-B13", "BR-T16", "BR-B14", "BR-B15", "BR-B16", "BR-T17", "BR-T18", "BR-T19", "BR-B17"],
+    "2026-12-01": ["BR-T01", "BR-T02", "BR-B01", "BR-B02", "BR-B03", "BR-T03", "BR-T04", "BR-T05", "BR-B04", "BR-T06", "BR-B05", "BR-T07", "BR-B06", "BR-T08", "BR-B07", "BR-T09", "BR-B08", "BR-T10", "BR-B09", "BR-T11", "BR-B10", "BR-B11", "BR-T12", "BR-T13", "BR-B12", "BR-T14", "BR-T15", "BR-B13", "BR-T16", "BR-B14", "BR-B15", "BR-B16", "BR-T17", "BR-T18", "BR-T19", "BR-B17"],
+    "2026-12-02": ["BR-T01", "BR-T02", "BR-B01", "BR-B02", "BR-B03", "BR-T03", "BR-T04", "BR-T05", "BR-B04", "BR-T06", "BR-B05", "BR-T07", "BR-B06", "BR-T08", "BR-B07", "BR-T09", "BR-B08", "BR-T10", "BR-B09", "BR-T11", "BR-B10", "BR-B11", "BR-T12", "BR-T13", "BR-B12", "BR-T14", "BR-T15", "BR-B13", "BR-T16", "BR-B14", "BR-B15", "BR-B16", "BR-T17", "BR-T18", "BR-T19", "BR-B17"],
+    "2026-12-03": ["BR-T01", "BR-T02", "BR-B01", "BR-B02", "BR-B03", "BR-T03", "BR-T04", "BR-T05", "BR-B04", "BR-T06", "BR-B05", "BR-T07", "BR-B06", "BR-T08", "BR-B07", "BR-T09", "BR-B08", "BR-T10", "BR-B09", "BR-T11", "BR-B10", "BR-B11", "BR-T12", "BR-T13", "BR-B12", "BR-T14", "BR-T15", "BR-B13", "BR-T16", "BR-B14", "BR-B15", "BR-B16", "BR-T17", "BR-T18", "BR-T19", "BR-B17"],
+    "2026-12-04": ["BR-T01", "BR-T02", "BR-B01", "BR-B02", "BR-B03", "BR-T03", "BR-T04", "BR-T05", "BR-B04", "BR-T06", "BR-B05", "BR-T07", "BR-B06", "BR-T08", "BR-B07", "BR-T09", "BR-B08", "BR-T10", "BR-B09", "BR-T11", "BR-B10", "BR-B11", "BR-T12", "BR-T13", "BR-B12", "BR-T14", "BR-T15", "BR-B13", "BR-T16", "BR-B14", "BR-B15", "BR-B16", "BR-T17", "BR-T18", "BR-T19", "BR-B17"],
+    "2026-12-05": ["BR-T01", "BR-T02", "BR-B01", "BR-B02", "BR-B03", "BR-T03", "BR-T04", "BR-T05", "BR-B04", "BR-T06", "BR-B05", "BR-T07", "BR-B06", "BR-T08", "BR-B07", "BR-T09", "BR-B08", "BR-T10", "BR-B09", "BR-T11", "BR-B10", "BR-B11", "BR-T12", "BR-T13", "BR-B12", "BR-T14", "BR-T15", "BR-B13", "BR-T16", "BR-B14", "BR-B15", "BR-B16", "BR-T17", "BR-T18", "BR-T19", "BR-B17"],
+    "2026-12-06": ["BR-T01", "BR-T02", "BR-B01", "BR-B02", "BR-B03", "BR-T03", "BR-T04", "BR-T05", "BR-B04", "BR-T06", "BR-B05", "BR-T07", "BR-B06", "BR-T08", "BR-B07", "BR-T09", "BR-B08", "BR-T10", "BR-B09", "BR-T11", "BR-B10", "BR-B11", "BR-T12", "BR-T13", "BR-B12", "BR-T14", "BR-T15", "BR-B13", "BR-T16", "BR-B14", "BR-B15", "BR-B16", "BR-T17", "BR-T18", "BR-T19", "BR-B17"],
+    "2026-12-07": ["BR-T01", "BR-T02", "BR-B01", "BR-B02", "BR-B03", "BR-T03", "BR-T04", "BR-T05", "BR-B04", "BR-T06", "BR-B05", "BR-T07", "BR-B06", "BR-T08", "BR-B07", "BR-T09", "BR-B08", "BR-T10", "BR-B09", "BR-T11", "BR-B10", "BR-B11", "BR-T12", "BR-T13", "BR-B12", "BR-T14", "BR-T15", "BR-B13", "BR-T16", "BR-B14", "BR-B15", "BR-B16", "BR-T17", "BR-T18", "BR-T19", "BR-B17"],
+    "2026-12-08": ["BR-T01", "BR-T02", "BR-B01", "BR-B02", "BR-B03", "BR-T03", "BR-T04", "BR-T05", "BR-B04", "BR-T06", "BR-B05", "BR-T07", "BR-B06", "BR-T08", "BR-B07", "BR-T09", "BR-B08", "BR-T10", "BR-B09", "BR-T11", "BR-B10", "BR-B11", "BR-T12", "BR-T13", "BR-B12", "BR-T14", "BR-T15", "BR-B13", "BR-T16", "BR-B14", "BR-B15", "BR-B16", "BR-T17", "BR-T18", "BR-T19", "BR-B17"],
+    "2026-12-09": ["BR-T01", "BR-T02", "BR-B01", "BR-B02", "BR-B03", "BR-T03", "BR-T04", "BR-T05", "BR-B04", "BR-T06", "BR-B05", "BR-T07", "BR-B06", "BR-T08", "BR-B07", "BR-T09", "BR-B08", "BR-T10", "BR-B09", "BR-T11", "BR-B10", "BR-B11", "BR-T12", "BR-T13", "BR-B12", "BR-T14", "BR-T15", "BR-B13", "BR-T16", "BR-B14", "BR-B15", "BR-B16", "BR-T17", "BR-T18", "BR-T19", "BR-B17"],
+    "2026-12-10": ["BR-T01", "BR-T02", "BR-B01", "BR-B02", "BR-B03", "BR-T03", "BR-T04", "BR-T05", "BR-B04", "BR-T06", "BR-B05", "BR-T07", "BR-B06", "BR-T08", "BR-B07", "BR-T09", "BR-B08", "BR-T10", "BR-B09", "BR-T11", "BR-B10", "BR-B11", "BR-T12", "BR-T13", "BR-B12", "BR-T14", "BR-T15", "BR-B13", "BR-T16", "BR-B14", "BR-B15", "BR-B16", "BR-T17", "BR-T18", "BR-T19", "BR-B17"],
+    "2026-12-11": ["BR-T01", "BR-T02", "BR-B01", "BR-B02", "BR-B03", "BR-T03", "BR-T04", "BR-T05", "BR-B04", "BR-T06", "BR-B05", "BR-T07", "BR-B06", "BR-T08", "BR-B07", "BR-T09", "BR-B08", "BR-T10", "BR-B09", "BR-T11", "BR-B10", "BR-B11", "BR-T12", "BR-T13", "BR-B12", "BR-T14", "BR-T15", "BR-B13", "BR-T16", "BR-B14", "BR-B15", "BR-B16", "BR-T17", "BR-T18", "BR-T19", "BR-B17"],
+    "2026-12-12": ["BR-T01", "BR-T02", "BR-B01", "BR-B02", "BR-B03", "BR-T03", "BR-T04", "BR-T05", "BR-B04", "BR-T06", "BR-B05", "BR-T07", "BR-B06", "BR-T08", "BR-B07", "BR-T09", "BR-B08", "BR-T10", "BR-B09", "BR-T11", "BR-B10", "BR-B11", "BR-T12", "BR-T13", "BR-B12", "BR-T14", "BR-T15", "BR-B13", "BR-T16", "BR-B14", "BR-B15", "BR-B16", "BR-T17", "BR-T18", "BR-T19", "BR-B17"],
+    "2026-12-13": ["BR-T01", "BR-T02", "BR-B01", "BR-B02", "BR-B03", "BR-T03", "BR-T04", "BR-T05", "BR-B04", "BR-T06", "BR-B05", "BR-T07", "BR-B06", "BR-T08", "BR-B07", "BR-T09", "BR-B08", "BR-T10", "BR-B09", "BR-T11", "BR-B10", "BR-B11", "BR-T12", "BR-T13", "BR-B12", "BR-T14", "BR-T15", "BR-B13", "BR-T16", "BR-B14", "BR-B15", "BR-B16", "BR-T17", "BR-T18", "BR-T19", "BR-B17"],
+    "2026-12-14": ["BR-T01", "BR-T02", "BR-B01", "BR-B02", "BR-B03", "BR-T03", "BR-T04", "BR-T05", "BR-B04", "BR-T06", "BR-B05", "BR-T07", "BR-B06", "BR-T08", "BR-B07", "BR-T09", "BR-B08", "BR-T10", "BR-B09", "BR-T11", "BR-B10", "BR-B11", "BR-T12", "BR-T13", "BR-B12", "BR-T14", "BR-T15", "BR-B13", "BR-T16", "BR-B14", "BR-B15", "BR-B16", "BR-T17", "BR-T18", "BR-T19", "BR-B17"],
+    "2026-12-15": ["BR-T01", "BR-T02", "BR-B01", "BR-B02", "BR-B03", "BR-T03", "BR-T04", "BR-T05", "BR-B04", "BR-T06", "BR-B05", "BR-T07", "BR-B06", "BR-T08", "BR-B07", "BR-T09", "BR-B08", "BR-T10", "BR-B09", "BR-T11", "BR-B10", "BR-B11", "BR-T12", "BR-T13", "BR-B12", "BR-T14", "BR-T15", "BR-B13", "BR-T16", "BR-B14", "BR-B15", "BR-B16", "BR-T17", "BR-T18", "BR-T19", "BR-B17"],
+    "2026-12-16": ["BR-T01", "BR-T02", "BR-B01", "BR-B02", "BR-B03", "BR-T03", "BR-T04", "BR-T05", "BR-B04", "BR-T06", "BR-B05", "BR-T07", "BR-B06", "BR-T08", "BR-B07", "BR-T09", "BR-B08", "BR-T10", "BR-B09", "BR-T11", "BR-B10", "BR-B11", "BR-T12", "BR-T13", "BR-B12", "BR-T14", "BR-T15", "BR-B13", "BR-T16", "BR-B14", "BR-B15", "BR-B16", "BR-T17", "BR-T18", "BR-T19", "BR-B17"],
+    "2026-12-17": ["BR-T01", "BR-T02", "BR-B01", "BR-B02", "BR-B03", "BR-T03", "BR-T04", "BR-T05", "BR-B04", "BR-T06", "BR-B05", "BR-T07", "BR-B06", "BR-T08", "BR-B07", "BR-T09", "BR-B08", "BR-T10", "BR-B09", "BR-T11", "BR-B10", "BR-B11", "BR-T12", "BR-T13", "BR-B12", "BR-T14", "BR-T15", "BR-B13", "BR-T16", "BR-B14", "BR-B15", "BR-B16", "BR-T17", "BR-T18", "BR-T19", "BR-B17"],
+    "2026-12-18": ["BR-T01", "BR-T02", "BR-B01", "BR-B02", "BR-B03", "BR-T03", "BR-T04", "BR-T05", "BR-B04", "BR-T06", "BR-B05", "BR-T07", "BR-B06", "BR-T08", "BR-B07", "BR-T09", "BR-B08", "BR-T10", "BR-B09", "BR-T11", "BR-B10", "BR-B11", "BR-T12", "BR-T13", "BR-B12", "BR-T14", "BR-T15", "BR-B13", "BR-T16", "BR-B14", "BR-B15", "BR-B16", "BR-T17", "BR-T18", "BR-T19", "BR-B17"],
+    "2026-12-19": ["BR-T01", "BR-T02", "BR-B01", "BR-B02", "BR-B03", "BR-T03", "BR-T04", "BR-T05", "BR-B04", "BR-T06", "BR-B05", "BR-T07", "BR-B06", "BR-T08", "BR-B07", "BR-T09", "BR-B08", "BR-T10", "BR-B09", "BR-T11", "BR-B10", "BR-B11", "BR-T12", "BR-T13", "BR-B12", "BR-T14", "BR-T15", "BR-B13", "BR-T16", "BR-B14", "BR-B15", "BR-B16", "BR-T17", "BR-T18", "BR-T19", "BR-B17"],
+    "2026-12-20": ["BR-T01", "BR-T02", "BR-B01", "BR-B02", "BR-B03", "BR-T03", "BR-T04", "BR-T05", "BR-B04", "BR-T06", "BR-B05", "BR-T07", "BR-B06", "BR-T08", "BR-B07", "BR-T09", "BR-B08", "BR-T10", "BR-B09", "BR-T11", "BR-B10", "BR-B11", "BR-T12", "BR-T13", "BR-B12", "BR-T14", "BR-T15", "BR-B13", "BR-T16", "BR-B14", "BR-B15", "BR-B16", "BR-T17", "BR-T18", "BR-T19", "BR-B17"],
+    "2026-12-21": ["BR-T01", "BR-T02", "BR-B01", "BR-B02", "BR-B03", "BR-T03", "BR-T04", "BR-T05", "BR-B04", "BR-T06", "BR-B05", "BR-T07", "BR-B06", "BR-T08", "BR-B07", "BR-T09", "BR-B08", "BR-T10", "BR-B09", "BR-T11", "BR-B10", "BR-B11", "BR-T12", "BR-T13", "BR-B12", "BR-T14", "BR-T15", "BR-B13", "BR-T16", "BR-B14", "BR-B15", "BR-B16", "BR-T17", "BR-T18", "BR-T19", "BR-B17"],
+    "2026-12-22": ["BR-T01", "BR-T02", "BR-B01", "BR-B02", "BR-B03", "BR-T03", "BR-T04", "BR-T05", "BR-B04", "BR-T06", "BR-B05", "BR-T07", "BR-B06", "BR-T08", "BR-B07", "BR-T09", "BR-B08", "BR-T10", "BR-B09", "BR-T11", "BR-B10", "BR-B11", "BR-T12", "BR-T13", "BR-B12", "BR-T14", "BR-T15", "BR-B13", "BR-T16", "BR-B14", "BR-B15", "BR-B16", "BR-T17", "BR-T18", "BR-T19", "BR-B17"],
+    "2026-12-23": ["BR-T01", "BR-T02", "BR-B01", "BR-B02", "BR-B03", "BR-T03", "BR-T04", "BR-T05", "BR-B04", "BR-T06", "BR-B05", "BR-T07", "BR-B06", "BR-T08", "BR-B07", "BR-T09", "BR-B08", "BR-T10", "BR-B09", "BR-T11", "BR-B10", "BR-B11", "BR-T12", "BR-T13", "BR-B12", "BR-T14", "BR-T15", "BR-B13", "BR-T16", "BR-B14", "BR-B15", "BR-B16", "BR-T17", "BR-T18", "BR-T19", "BR-B17"],
+    "2026-12-24": ["BR-T01", "BR-T02", "BR-B01", "BR-B02", "BR-B03", "BR-T03", "BR-T04", "BR-T05", "BR-B04", "BR-T06", "BR-B05", "BR-T07", "BR-B06", "BR-T08", "BR-B07", "BR-T09", "BR-B08", "BR-T10", "BR-B09", "BR-T11", "BR-B10", "BR-B11", "BR-T12", "BR-T13", "BR-B12", "BR-T14", "BR-T15", "BR-B13", "BR-T16", "BR-B14", "BR-B15", "BR-B16", "BR-T17", "BR-T18", "BR-T19", "BR-B17"],
+    "2026-12-25": ["BR-T01", "BR-T02", "BR-B01", "BR-B02", "BR-B03", "BR-T03", "BR-T04", "BR-T05", "BR-B04", "BR-T06", "BR-B05", "BR-T07", "BR-B06", "BR-T08", "BR-B07", "BR-T09", "BR-B08", "BR-T10", "BR-B09", "BR-T11", "BR-B10", "BR-B11", "BR-T12", "BR-T13", "BR-B12", "BR-T14", "BR-T15", "BR-B13", "BR-T16", "BR-B14", "BR-B15", "BR-B16", "BR-T17", "BR-T18", "BR-T19", "BR-B17"],
+    "2026-12-26": ["BR-T01", "BR-T02", "BR-B01", "BR-B02", "BR-B03", "BR-T03", "BR-T04", "BR-T05", "BR-B04", "BR-T06", "BR-B05", "BR-T07", "BR-B06", "BR-T08", "BR-B07", "BR-T09", "BR-B08", "BR-T10", "BR-B09", "BR-T11", "BR-B10", "BR-B11", "BR-T12", "BR-T13", "BR-B12", "BR-T14", "BR-T15", "BR-B13", "BR-T16", "BR-B14", "BR-B15", "BR-B16", "BR-T17", "BR-T18", "BR-T19", "BR-B17"],
+    "2026-12-27": ["BR-T01", "BR-T02", "BR-B01", "BR-B02", "BR-B03", "BR-T03", "BR-T04", "BR-T05", "BR-B04", "BR-T06", "BR-B05", "BR-T07", "BR-B06", "BR-T08", "BR-B07", "BR-T09", "BR-B08", "BR-T10", "BR-B09", "BR-T11", "BR-B10", "BR-B11", "BR-T12", "BR-T13", "BR-B12", "BR-T14", "BR-T15", "BR-B13", "BR-T16", "BR-B14", "BR-B15", "BR-B16", "BR-T17", "BR-T18", "BR-T19", "BR-B17"],
+    "2026-12-28": ["BR-T01", "BR-T02", "BR-B01", "BR-B02", "BR-B03", "BR-T03", "BR-T04", "BR-T05", "BR-B04", "BR-T06", "BR-B05", "BR-T07", "BR-B06", "BR-T08", "BR-B07", "BR-T09", "BR-B08", "BR-T10", "BR-B09", "BR-T11", "BR-B10", "BR-B11", "BR-T12", "BR-T13", "BR-B12", "BR-T14", "BR-T15", "BR-B13", "BR-T16", "BR-B14", "BR-B15", "BR-B16", "BR-T17", "BR-T18", "BR-T19", "BR-B17"],
+    "2026-12-29": ["BR-T01", "BR-T02", "BR-B01", "BR-B02", "BR-B03", "BR-T03", "BR-T04", "BR-T05", "BR-B04", "BR-T06", "BR-B05", "BR-T07", "BR-B06", "BR-T08", "BR-B07", "BR-T09", "BR-B08", "BR-T10", "BR-B09", "BR-T11", "BR-B10", "BR-B11", "BR-T12", "BR-T13", "BR-B12", "BR-T14", "BR-T15", "BR-B13", "BR-T16", "BR-B14", "BR-B15", "BR-B16", "BR-T17", "BR-T18", "BR-T19", "BR-B17"],
+    "2026-12-30": ["BR-T01", "BR-T02", "BR-B01", "BR-B02", "BR-B03", "BR-T03", "BR-T04", "BR-T05", "BR-B04", "BR-T06", "BR-B05", "BR-T07", "BR-B06", "BR-T08", "BR-B07", "BR-T09", "BR-B08", "BR-T10", "BR-B09", "BR-T11", "BR-B10", "BR-B11", "BR-T12", "BR-T13", "BR-B12", "BR-T14", "BR-T15", "BR-B13", "BR-T16", "BR-B14", "BR-B15", "BR-B16", "BR-T17", "BR-T18", "BR-T19", "BR-B17"],
+    "2026-12-31": ["BR-T01", "BR-T02", "BR-B01", "BR-B02", "BR-B03", "BR-T03", "BR-T04", "BR-T05", "BR-B04", "BR-T06", "BR-B05", "BR-T07", "BR-B06", "BR-T08", "BR-B07", "BR-T09", "BR-B08", "BR-T10", "BR-B09", "BR-T11", "BR-B10", "BR-B11", "BR-T12", "BR-T13", "BR-B12", "BR-T14", "BR-T15", "BR-B13", "BR-T16", "BR-B14", "BR-B15", "BR-B16", "BR-T17", "BR-T18", "BR-T19", "BR-B17"]
+  }
+}
