@@ -20,8 +20,14 @@ def InputDataPemesan():
 #Menginput stasiun
 def InputStasiun():
     Border()
+    
     list_stasiun = [stasiun["nama"] for stasiun in data["stasiun"]]
     list_stasiun_lower = [nama.lower() for nama in list_stasiun] 
+    
+    print("List Nama Stasiun")
+    for i in list_stasiun:
+        print("- " + i) 
+    
     while True:
         stasiun_asal_input = input("Masukkan stasiun asal: ").strip().lower()
         if stasiun_asal_input in list_stasiun_lower:
@@ -113,7 +119,7 @@ def PilihKereta(daftar_jadwal):
     nomor_valid = []
     for nomor in range(1, len(daftar_jadwal) + 1):
         jadwal = daftar_jadwal[nomor - 1]
-        print(str(nomor) + ". " + jadwal["seri"] + "  berangkat " + jadwal["berangkat"] + "  tiba " + jadwal["tiba"])
+        print(str(nomor) + ". " + jadwal["seri"] + "  berangkat " + jadwal["berangkat"])
         nomor_valid.append(str(nomor))
 
     while True:
@@ -123,6 +129,51 @@ def PilihKereta(daftar_jadwal):
         print("Pilihan tidak valid, silahkan coba lagi.")
 
 #Generate Kursi
-def GenerateKursi():
+#def GenerateKursi():
+#
+#    return
 
+def PilihGerbongDanJumlahTiket():
+    Border()
+    while True:
+        gerbong = int(input("Silahkan pilih gerbong kereta (1-7): "))   
+        if gerbong >= 1 and gerbong <= 7:
+            break
+        else:
+            gerbong = int(input("Gerbong tidak valid, masukkan angka 1 hingga 7 untuk nomor gerbong: "))
+    return gerbong, jumlah_tiket
+
+def HitungTiket(jumlah_tiket):
+    Border()
+    #basically function buat nyediain data yg NANTI akan ditampilin di tiket
+    
+    #waktu perjalanan = ambil SELISIH ANTARA waktu tiba perjalanan di stasiun tujuan DENGAN waktu mulai perjalanan di stasiun awal
+    
+    #harga tiket = ini di tentuin either 4k or 5k kalo dia lewat stasiun pembatas lintas barat / timur 
+    #harga tiket itu so basically
+    #stasiun pembatas lintas barat / timur = kiaracondong
+    # stasiun awal & akhir di timur kiaracondong = 4k
+    # st awal akhir di barat kiaracondong = 4k
+    # st awal di timur & st akhir di barat = 5k
+    # vice versa 5k
+    # harga tiket dikali jumlah tiket
+    
+    #kode unik tiket? just made it up
+    
+    #return waktu_perjalanan, harga_tiket, kode_unik_tiket
+    return
+
+def Pembayaran(harga_tiket):
+    Border()
+    #just made up random pembayaran pake bank account, just ngarang, harusnya ga berhubungan ama system kereta-keretaan itu, this is like its own algorithm buat miscelanous aja, biar kliatan legit
+    #end with pembayaran sukses
+    return
+
+def TampilkanTiket():
+    
+    #argument di def TampilkanTiket(): is gonna be like almost every important data ever, maybe like TampilkanTiket(pemesan_nama, pemesan_telp, etc etc)
+    
+    Border()
+    #the last one, literally tampilin semua data yg penting untuk ada di tiket
+    Border()
     return
