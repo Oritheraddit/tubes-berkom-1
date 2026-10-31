@@ -1,5 +1,5 @@
 import json
-from functions.input import InputStasiun,InputDataPemesan,CariJadwal,CariTanggal,PilihKereta,PilihGerbongDanJumlahTiket
+from functions.input import (InputStasiun,InputDataPemesan,CariJadwal,CariTanggal,PilihKereta,PilihGerbongDanJumlahTiket,HitungTiket,Pembayaran,TampilkanTiket)
 
 print("Selamat datang di pemesanan tiket kereta Commuter Line Bandung Raya")
 
@@ -16,3 +16,13 @@ while True:
 
 kereta_dipilih = PilihKereta(jadwal)
 gerbong, jumlah_tiket = PilihGerbongDanJumlahTiket()
+
+waktu_perjalanan, harga_tiket, kode_unik_tiket = HitungTiket(jumlah_tiket, stasiun_asal, stasiun_tujuan, kereta_dipilih)
+
+Pembayaran(harga_tiket)
+
+# ... kode sebelumnya ...
+Pembayaran(harga_tiket)
+
+# Tambahkan kereta_dipilih di akhir argumen
+TampilkanTiket(pemesan_nama, pemesan_telp, pemesan_email, stasiun_asal, stasiun_tujuan, tanggal, gerbong, jumlah_tiket, waktu_perjalanan, harga_tiket, kode_unik_tiket, kereta_dipilih)

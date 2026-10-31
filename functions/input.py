@@ -1,4 +1,6 @@
 import math
+import random
+import string
 from datetime import datetime, timedelta
 import json
 data = json.load(open("data/data_commuter_bandung_raya.json", encoding="utf-8"))
@@ -110,6 +112,7 @@ def CariJadwal(asal, tujuan, tanggal):
                 #if len(daftar_jadwal) == 3:
                 #    break
 
+    daftar_jadwal.sort(key=lambda jadwal: jadwal["berangkat"])
     return daftar_jadwal
 
 #Pilih Kereta
@@ -128,52 +131,110 @@ def PilihKereta(daftar_jadwal):
             return daftar_jadwal[int(pilihan) - 1]
         print("Pilihan tidak valid, silahkan coba lagi.")
 
-#Generate Kursi
-#def GenerateKursi():
-#
-#    return
-
 def PilihGerbongDanJumlahTiket():
     Border()
     while True:
         gerbong = int(input("Silahkan pilih gerbong kereta (1-7): "))   
-        if gerbong >= 1 and gerbong <= 7:
+        if type(gerbong)==int and gerbong >= 1 and gerbong <= 7:
             break
         else:
             gerbong = int(input("Gerbong tidak valid, masukkan angka 1 hingga 7 untuk nomor gerbong: "))
+  
+    while True:
+        jumlah_tiket = int(input("Masukkan jumlah tiket: ").strip())
+        if type(jumlah_tiket)==int and jumlah_tiket > 0 :
+            break
+        else:
+            print("Jumlah tiket tidak valid, masukkan angka valid.")
     return gerbong, jumlah_tiket
 
-def HitungTiket(jumlah_tiket):
+def HitungTiket(jumlah_tiket, stasiun_asal, stasiun_tujuan, kereta_dipilih):
     Border()
-    #basically function buat nyediain data yg NANTI akan ditampilin di tiket
     
-    #waktu perjalanan = ambil SELISIH ANTARA waktu tiba perjalanan di stasiun tujuan DENGAN waktu mulai perjalanan di stasiun awal
+    def ke_menit(jam):
+        jam_str, menit_str = jam.split(".")
+        return int(jam_str) * 60 + int(menit_str)
+
+    waktu_perjalanan = (ke_menit(kereta_dipilih["tiba"]) - ke_menit(kereta_dipilih["berangkat"])) % 1440
+
+    def ke_menit(jam):
+        jam_str, menit_str = jam.split(".")
+        return int(jam_str) * 60 + int(menit_str)
+ 
+    waktu_perjalanan = (ke_menit(kereta_dipilih["tiba"]) - ke_menit(kereta_dipilih["berangkat"])) % 1440
+ 
+ 
+    km_stasiun = {s["nama"]: s["km"] for s in data["stasiun"]}
+    km_batas = km_stasiun[data["tarif"]["stasiun_batas"]]
+ 
+    posisi_asal = km_stasiun[stasiun_asal] - km_batas
+    posisi_tujuan = km_stasiun[stasiun_tujuan] - km_batas
+    if posisi_asal * posisi_tujuan < 0:
+        harga_per_tiket = data["tarif"]["lintas_penuh"]
+    else:
+        harga_per_tiket = data["tarif"]["satu_sisi"]
+    harga_tiket = harga_per_tiket * jumlah_tiket
+ 
+    karakter = string.ascii_uppercase + string.digits
+    kode_unik_tiket = "TKT-" + "".join(random.choice(karakter) for _ in range(8))
+ 
+    print("Rincian perjalanan:")
+    print("Waktu perjalanan : " + str(waktu_perjalanan) + " menit")
+    print("Harga per tiket  : Rp" + format(harga_per_tiket, ",").replace(",", "."))
+    print("Jumlah tiket     : " + str(jumlah_tiket))
+    print("Total harga      : Rp" + format(harga_tiket, ",").replace(",", "."))
+ 
+    return waktu_perjalanan, harga_tiket, kode_unik_tiket
     
-    #harga tiket = ini di tentuin either 4k or 5k kalo dia lewat stasiun pembatas lintas barat / timur 
-    #harga tiket itu so basically
-    #stasiun pembatas lintas barat / timur = kiaracondong
-    # stasiun awal & akhir di timur kiaracondong = 4k
-    # st awal akhir di barat kiaracondong = 4k
-    # st awal di timur & st akhir di barat = 5k
-    # vice versa 5k
-    # harga tiket dikali jumlah tiket
-    
-    #kode unik tiket? just made it up
-    
-    #return waktu_perjalanan, harga_tiket, kode_unik_tiket
-    return
+    return waktu_perjalanan, harga_tiket, kode_unik_tiket
 
 def Pembayaran(harga_tiket):
     Border()
-    #just made up random pembayaran pake bank account, just ngarang, harusnya ga berhubungan ama system kereta-keretaan itu, this is like its own algorithm buat miscelanous aja, biar kliatan legit
-    #end with pembayaran sukses
-    return
+    daftar_bank = ["BCA", "Mandiri", "BNI", "BRI"]
+    print("Total pembayaran: Rp" + format(harga_tiket, ",").replace(",", "."))
+    print("Pilih bank untuk pembayaran:")
+    for nomor in range(len(daftar_bank)):
+        print(str(nomor + 1) + ". " + daftar_bank[nomor])
 
-def TampilkanTiket():
-    
-    #argument di def TampilkanTiket(): is gonna be like almost every important data ever, maybe like TampilkanTiket(pemesan_nama, pemesan_telp, etc etc)
+    while True:
+        pilihan = input("Pilih bank (1-" + str(len(daftar_bank)) + "): ").strip()
+        if pilihan.isdigit() and 1 <= int(pilihan) <= len(daftar_bank):
+            break
+        print("Pilihan tidak valid, silahkan coba lagi.")
+
+    while True:
+        no_rekening = input("Masukkan nomor rekening: ").strip()
+        if no_rekening.isdigit() and 10 <= len(no_rekening) <= 16:
+            break
+        print("Nomor rekening tidak valid, silahkan coba lagi.")
+
+    while True:
+        pin = input("Masukkan PIN (6 digit): ").strip()
+        if pin.isdigit() and len(pin) == 6:
+            break
+        print("PIN harus 6 digit angka, silahkan coba lagi.")
+
+    print("\nMemproses pembayaran dari rekening " + "*"*(len(no_rekening)-4) + no_rekening[-4:] + " ...")
+    print("Pembayaran sukses!")
+
+def TampilkanTiket(pemesan_nama, pemesan_telp, pemesan_email, stasiun_asal, stasiun_tujuan, tanggal, gerbong, jumlah_tiket, waktu_perjalanan, harga_tiket, kode_unik_tiket, kereta_dipilih):
     
     Border()
-    #the last one, literally tampilin semua data yg penting untuk ada di tiket
+    print("TIKET COMMUTER LINE BANDUNG RAYA")
+    print("Kode tiket     : " + kode_unik_tiket)
+    print("Nama pemesan   : " + pemesan_nama)
+    print("No. telepon    : " + pemesan_telp)
+    print("Email          : " + pemesan_email)
+    print("Kereta         : " + kereta_dipilih["seri"] + " (" + kereta_dipilih["kode"] + ")")
+    print("Tanggal        : " + tanggal)
+    print("Rute           : " + stasiun_asal + " -> " + stasiun_tujuan)
+    print("Berangkat      : " + kereta_dipilih["berangkat"])
+    print("Tiba           : " + kereta_dipilih["tiba"])
+    print("Waktu tempuh   : " + str(waktu_perjalanan) + " menit")
+    print("Gerbong        : " + str(gerbong))
+    print("Jumlah tiket   : " + str(jumlah_tiket))
+    print("Total bayar    : Rp" + format(harga_tiket, ",").replace(",", "."))
+    print("Status         : LUNAS")
+    Border()
     Border()
     return
