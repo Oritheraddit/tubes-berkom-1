@@ -21,8 +21,4 @@ waktu_perjalanan, harga_tiket, kode_unik_tiket = HitungTiket(jumlah_tiket, stasi
 
 Pembayaran(harga_tiket)
 
-# ... kode sebelumnya ...
-Pembayaran(harga_tiket)
-
-# Tambahkan kereta_dipilih di akhir argumen
 TampilkanTiket(pemesan_nama, pemesan_telp, pemesan_email, stasiun_asal, stasiun_tujuan, tanggal, gerbong, jumlah_tiket, waktu_perjalanan, harga_tiket, kode_unik_tiket, kereta_dipilih)
